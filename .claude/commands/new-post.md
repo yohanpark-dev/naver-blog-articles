@@ -46,7 +46,7 @@
 
 `/plan-week`로 일정을 잡을 때 이미 만들어진 Linear 이슈가 있다면 그 ID를 frontmatter `linear_issue_id`에 적습니다.
 
-이슈가 없다면 사용자에게 "Linear에 이슈를 만들고 ID를 frontmatter에 연결할까요?"라고 묻습니다. 사용자가 예라고 하면 Linear MCP를 사용해 이슈를 생성하고 ID를 적습니다.
+이슈가 없다면 사용자에게 "Linear에 이슈를 만들고 ID를 frontmatter에 연결할까요?"라고 묻습니다. 사용자가 예라고 하면 Linear MCP를 사용해 `yohanpark-dev-docs` 팀의 "네이버 블로그 글" 프로젝트에 이슈를 생성하고 ID(`YDOC-1` 형식)를 적습니다.
 
 ## 5. 자료 조사 안내
 

@@ -80,7 +80,7 @@ test_environment:
   apps_tested: []            # 예: [Outlook, Word, Excel, Teams]
 
 # --- 일정 관리 ---
-linear_issue_id: ""          # 예: "BLOG-23"
+linear_issue_id: ""          # 예: "YDOC-1" (yohanpark-dev-docs 팀)
                              # /plan-week 명령으로 자동 생성 가능합니다.
 
 # --- 네이버 블로그 ---
