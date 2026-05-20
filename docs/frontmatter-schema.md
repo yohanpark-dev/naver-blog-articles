@@ -128,7 +128,7 @@ sources:
 
 ## 일정 관리
 
-`linear_issue_id`는 Linear에서 만든 이슈의 ID입니다. 예: `BLOG-23`. `/plan-week` 명령으로 일정을 잡을 때 자동으로 이슈가 만들어지고 이 필드가 채워집니다.
+`linear_issue_id`는 Linear에서 만든 이슈의 ID입니다. 이 저장소의 이슈는 `yohanpark-dev-docs` 팀(이슈 키 `YDOC`)에서 관리하므로 ID는 `YDOC-1` 형식입니다. `/plan-week` 명령으로 일정을 잡을 때 자동으로 이슈가 만들어지고 이 필드가 채워집니다.
 
 ## 발행 정보
 
