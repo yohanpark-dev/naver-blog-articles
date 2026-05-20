@@ -94,7 +94,7 @@
 
 ## 사용자에 대한 정보
 
-- 도메인: yohanpark.dev
+- 도메인: https://blog.naver.com/yohanpark_dev
 - 블로그 플랫폼: 네이버 블로그
 - 글의 1차 독자: 비개발자 (네이버 검색 유입 비중 높음)
 - 주요 주제: MS365, Copilot, 기업 IT 도구, 기업 교육 현장에서 본 도입 사례
