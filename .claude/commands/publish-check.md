@@ -26,11 +26,7 @@
 
 #### B-1. URL 도메인 검증
 
-각 출처의 URL이 허용 도메인인지 확인합니다.
-
-- `microsoft_official`: `learn.microsoft.com/ko-kr/`로 시작해야 합니다. 영문 페이지(`/en-us/`)나 Microsoft 블로그는 거부합니다.
-- `legal`: `law.go.kr`, `*.go.kr`, 또는 명시적으로 공공기관으로 등록된 도메인.
-- `security_vendor`: frontmatter에 등록되거나 일반적으로 인정되는 보안 솔루션 업체 공식 도메인.
+각 출처의 URL이 `references/README.md`의 허용 출처 기준에 맞는지 확인합니다. 허용 도메인 목록은 `references/README.md`에만 있으므로, 검사할 때 그 파일을 읽어 세 갈래(`microsoft_official`, `legal`, `security_vendor`) 각각의 허용 범위와 대조합니다. 이 문서에는 구체적인 도메인을 적지 않습니다.
 
 #### B-2. 인용 문장(quotes) 존재 검증
 
@@ -52,12 +48,7 @@
 
 #### B-5. 본문 안 URL 검증
 
-본문에서 발견되는 모든 URL을 추출해 허용 도메인 외 URL이 있는지 확인합니다. 특히 다음 도메인은 명확히 금지이므로 강하게 경고합니다.
-
-- 네이버 블로그, 티스토리, 브런치, 미디엄, 개인 블로그
-- 커뮤니티 사이트(클리앙, 디씨, 레딧 등)
-- 언론사 도메인
-- learn.microsoft.com이지만 `/ko-kr/`이 아닌 경우
+본문에서 발견되는 모든 URL을 추출해 `references/README.md`의 허용 출처 기준 밖에 있는 URL이 없는지 확인합니다. `references/README.md`의 "사용하지 않는 출처"에 해당하는 URL이 본문에 있으면 강하게 경고합니다. 금지 대상의 구체적인 목록도 `references/README.md`를 기준으로 삼고, 이 문서에는 따로 나열하지 않습니다.
 
 ### C. AI 클리셰 검사
 
