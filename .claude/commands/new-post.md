@@ -4,7 +4,18 @@
 
 ## 1. 사용자에게 묻기
 
-다음 정보를 한 번에 모아 묻습니다.
+### 시작 템플릿 정하기
+
+먼저 어느 템플릿으로 시작할지 정합니다. 명령 인자로 템플릿 파일명이 주어졌거나(`/new-post qna-template.md` 형태), `/plan-week`에서 이미 템플릿을 정해 둔 경우에는 그 파일명을 그대로 사용하고 아래 질문은 생략합니다. 정해진 것이 없으면 `templates/` 폴더를 읽어 목록을 보여주고 묻되, 사용자가 답하지 않으면 기본값 `post-template.md`로 진행합니다.
+
+- `post-template.md` — 일반 글(리뷰, 사용기, 정리 글)의 기본 시작점
+- `qna-template.md` — 저자와 제3의 가상 인물이 질문·답변을 주고받는 대화형 Q&A 글
+
+`templates/` 폴더를 직접 읽어 목록을 만들므로, 템플릿이 더 늘어도 이 문서를 고치지 않고 따라갑니다.
+
+### 글 정보 묻기
+
+이어서 다음 정보를 한 번에 모아 묻습니다.
 
 - 글 제목 (한국어, 네이버 블로그에 그대로 들어갈 형태)
 - 글 식별자(slug, 영문 소문자 + 하이픈, 예: ms365-copilot-first-month)
@@ -27,7 +38,7 @@
 
 ## 3. 파일 생성
 
-`templates/post-template.md`를 `drafts/YYYY-MM-DD-slug.md`로 복사합니다. `YYYY-MM-DD`는 오늘 날짜, `slug`는 사용자가 답한 값입니다.
+1단계에서 정한 템플릿을 `drafts/YYYY-MM-DD-slug.md`로 복사합니다. `YYYY-MM-DD`는 오늘 날짜, `slug`는 사용자가 답한 값입니다. 템플릿을 따로 정하지 않았으면 `templates/post-template.md`를 사용합니다. `post-template.md`와 `qna-template.md`는 frontmatter 구조가 같으므로, 어느 템플릿을 골라도 아래 frontmatter 채우기 절차는 동일합니다.
 
 복사한 파일의 frontmatter에서 다음 항목을 채웁니다.
 
