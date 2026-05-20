@@ -25,9 +25,9 @@
 - 무엇이 틀렸나요? (본문의 어느 문장이 잘못되었는지 인용)
 - 무엇이 맞나요? (정확한 내용. 1~2 문장으로 압축)
 - 잘못된 이유는? (예: 법령 개정을 인지하지 못함, 공식 문서를 잘못 읽음, Copilot 기능 업데이트로 동작이 바뀜)
-- 근거 자료 URL은? (factual인 경우 필수. 허용 도메인 검증)
+- 근거 자료 URL은? (factual인 경우 필수. `references/README.md` 기준으로 허용 도메인 검증)
 
-근거 자료 URL이 허용 도메인 외(블로그, 커뮤니티, 언론사 등)라면 진행을 보류하고 다른 출처를 요청합니다.
+근거 자료 URL이 `references/README.md`의 허용 도메인 외(블로그, 커뮤니티, 언론사 등)라면 진행을 보류하고 다른 출처를 요청합니다.
 
 ## 3. Frontmatter에 정정 이력 추가
 
@@ -42,7 +42,7 @@ corrections:
     what: "본문 4절 ②에서 OO법 X조라고 적었으나 Y조의 오기"
     correct: "OO법 Y조 — 외부 클라우드 AI 응답에 대한 신용정보 제한 규정"
     reason: "법령 개정 사실을 잘못 인지"
-    source: "https://www.law.go.kr/..."
+    source: "(근거 자료의 URL)"
     github_issue: "https://github.com/USERNAME/yohanpark-blog/issues/12"
 ```
 

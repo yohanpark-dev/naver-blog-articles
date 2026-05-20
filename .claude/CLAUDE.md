@@ -12,13 +12,9 @@
 
 사용자가 초안에서 `<pre></pre>` 태그로 감싼 내용은 사용자가 직접 작성한 것입니다. Claude Code는 이 태그 안의 내용은 확인만 하고 문장을 고치거나 다시 쓰지 않습니다. 자세한 규칙은 `drafts/README.md`를 참조합니다.
 
-자료 출처는 다음 세 갈래로만 한정합니다.
+자료 출처 정책의 최우선 기준은 `references/README.md`입니다. 허용 출처와 사용하지 않는 출처의 구체적인 이름·도메인·URL은 모두 그 파일에만 있으며, 이 파일을 포함한 다른 문서에는 직접적인 출처 이름이나 URL을 적지 않습니다. 출처를 다룰 때는 항상 `references/README.md`를 읽어 그 기준을 따릅니다. (글 frontmatter의 `sources`에 적는 실제 인용 자료의 제목·URL은 예외입니다.)
 
-1. Microsoft 공식 문서: `learn.microsoft.com/ko-kr/` 도메인 한국어 페이지만 허용
-2. 법령과 공공기관 가이드라인: 법령정보센터(`law.go.kr`) 등 공공 도메인
-3. 보안 솔루션 업체의 공식 페이지나 백서
-
-블로그, 커뮤니티, 언론 기사는 어떤 경우에도 출처로 사용하지 않습니다.
+`references/README.md`는 사용자가 직접 관리하는 기준 문서입니다. 사용자의 명시적 요청이 없으면 Claude Code는 이 파일을 수정하거나 항목을 추가하지 않고 읽기만 합니다. 자세한 규칙은 `references/README.md`의 "이 파일은 사용자가 직접 관리합니다"와 "직접적인 출처 이름과 URL은 이 파일에만 적습니다" 섹션을 참조합니다.
 
 **출처를 인용할 때는 URL뿐 아니라 인용한 문장(원문 그대로)을 함께 기록합니다.** frontmatter의 `sources.<갈래>[].quotes`에 `text`(원문 문장)와 `cited_in`(본문 어느 절에서 인용했는지)을 적습니다. 한 인용 문장은 200자 이내로 제한합니다.
 
@@ -26,9 +22,9 @@
 
 - `posts/` — 발행 완료된 글. 파일명은 `YYYY-MM-DD-slug.md` 형식.
 - `drafts/` — 작성 중인 글. 발행 시 `posts/`로 이동합니다.
-- `templates/` — `post-template.md`가 모든 새 글의 시작점입니다.
+- `templates/` — 새 글의 시작점이 되는 템플릿 모음. `post-template.md`(일반 글), `qna-template.md`(대화형 Q&A 글)가 있습니다.
 - `docs/` — 글쓰기 원칙, 워크플로우 등 메타 문서.
-- `references/` — 허용 자료 출처 목록. 출처 정책(세 갈래)의 기준 문서.
+- `references/` — 허용 자료 출처 목록. `references/README.md`가 출처 정책의 최우선 기준 문서.
 - `scripts/` — 발행 전 검사, 이전 글 매칭 등 자동화 스크립트 (선택).
 - `.claude/commands/` — 슬래시 명령어 정의 파일들.
 

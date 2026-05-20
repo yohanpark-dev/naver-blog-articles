@@ -51,7 +51,7 @@ corrections:
     what: "본문 4절 ②에서 인용한 OO법 X조는 실제로는 Y조"
     correct: "OO법 Y조 — 외부 클라우드 AI 응답에 대한 신용정보 제한 규정"
     reason: "법령 개정 사실을 인지하지 못함"
-    source: "https://www.law.go.kr/..."
+    source: "(근거 자료의 URL)"
     github_issue: "https://github.com/USERNAME/yohanpark-blog/issues/12"
 ```
 
@@ -78,6 +78,8 @@ corrections:
 
 `short_summary`는 글 제목 바로 아래에 노출되는 박스의 내용입니다. 한 줄(60자 이내) 정도로 압축합니다. 예: "구조 설계와 자료 정리에 Claude 사용. 본문은 직접 작성." 이 문장은 본문을 읽기 시작하는 모든 독자가 가장 먼저 보는 메타정보이므로, 너무 길면 본문이 시작되기도 전에 메타정보에 지치게 됩니다.
 
+대화형 Q&A 글(`qna-template.md`)에서는 이 자리에 세부 질문이나 답변이 아니라 AI가 제안한 "생각해볼 넓은 주제" 문장 자체를 적습니다. 이 경우에도 2문장 이하의 짧은 화두로 유지합니다.
+
 `tools_used`에는 글 작성에 사용한 AI 도구를 적습니다. 도구 이름과 사용 목적을 함께 적습니다. 예: `["Claude (Anthropic) — 글 구조 설계", "Claude Code — 자료 정리와 발행 전 검사"]`. 이 내용은 글 하단 "이 글에 대하여" 섹션에 자세히 노출됩니다.
 
 `used_for`에는 AI를 사용한 구체적인 작업을 나열합니다. 예: `["글 구조 설계", "공식 문서 검색과 정리", "발행 전 자동 검사", "맞춤법 검토"]`.
@@ -88,27 +90,23 @@ corrections:
 
 ## 출처
 
-`sources`는 세 갈래로 분리됩니다. 그리고 각 출처 항목 안에 `quotes` 배열이 있어 본문에서 인용한 문장을 함께 기록합니다. 이 형식이 신뢰의 핵심입니다.
+`sources`는 세 갈래로 분리됩니다. 허용 출처의 최우선 기준은 `references/README.md`이며, 이 문서의 설명과 충돌하면 `references/README.md`를 따릅니다. 각 출처 항목 안에는 `quotes` 배열이 있어 본문에서 인용한 문장을 함께 기록합니다. 이 형식이 신뢰의 핵심입니다.
 
 ```yaml
 sources:
   microsoft_official:
-    - title: "Microsoft 365 Copilot의 데이터, 개인 정보 및 보안"
-      url: "https://learn.microsoft.com/ko-kr/copilot/microsoft-365/microsoft-365-copilot-privacy"
+    - title: "(인용한 공식 문서의 제목)"
+      url: "(인용한 공식 문서의 URL)"
       quotes:
-        - text: "Microsoft 365 Copilot은 사용자의 프롬프트 또는 응답을 기반 모델을 학습하는 데 사용하지 않습니다."
+        - text: "원문에서 그대로 가져온 인용 문장"
           cited_in: "본문 3절"
-        - text: "사용자가 액세스 권한이 있는 데이터에만 응답을 생성합니다."
+        - text: "같은 문서에서 인용한 다른 문장"
           cited_in: "본문 4절 ③"
 ```
 
 ### 각 갈래의 허용 범위
 
-`microsoft_official`에는 `learn.microsoft.com/ko-kr/` 도메인의 한국어 페이지만 들어갑니다. 영문 페이지나 Microsoft 블로그는 허용되지 않습니다. 발행 전 검사에서 도메인이 자동으로 검증됩니다.
-
-`legal`에는 법령정보센터(`law.go.kr`)와 공공기관 가이드라인이 들어갑니다. 다른 도메인은 명시적으로 등록하지 않으면 거부됩니다.
-
-`security_vendor`에는 보안 솔루션 업체의 공식 페이지나 백서가 들어갑니다.
+`sources`는 세 갈래(`microsoft_official`, `legal`, `security_vendor`)로 나뉩니다. 각 갈래에 어떤 자료가 들어갈 수 있는지 — 허용 도메인과 구체적인 기준 — 는 `references/README.md`에 정리되어 있습니다. 이 문서에는 직접적인 출처 이름이나 도메인을 적지 않으므로, 갈래별 허용 범위를 확인할 때는 `references/README.md`를 봅니다. 발행 전 검사(`/publish-check`)도 그 기준으로 도메인을 자동 검증합니다.
 
 ### quotes 항목의 규칙
 
